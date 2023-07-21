@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import Image from "./assets/moonsoon.jpg";
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
         >
           Learn React Carefully
         </a>
+        {/* <img src="/moonsoon.jpg" width="300" height="300" alt="" /> */}
+        <img src={Image} width="300" height="300" alt="" />
       </header>
     </div>
   );
