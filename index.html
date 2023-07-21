@@ -25,7 +25,30 @@
   <script type="text/babel">
     //  Return JSX (HTML Template)
     const Main = () => {
-      return <div>This is the main session.</div>;
+      let name = "thae nandar soe";
+      let age = 22;
+      let className = "my-class-name";
+      let onClickHandler = () => {
+        alert("hello world");
+      };
+      return (
+        <div className={className}>
+          <p>My name is {name.toUpperCase()}.</p>
+          <p>
+            I am <strong>{age}</strong> years old.
+          </p>
+          <p>Today is {new Date().toDateString()}</p>
+          <button onClick={onClickHandler}>Click me Hello world.</button> <br />
+          <button
+            onClick={() => {
+              alert("Hi there, welcome");
+            }}
+          >
+            Click me welcome.
+          </button>
+          <br />
+        </div>
+      );
     };
     // Get html id
     let rootContainer = document.getElementById("main");
