@@ -48,7 +48,7 @@ function App() {
               <br /> <button onClick={() => deletePost(post.id)}>Delete</button>
             </li>
           ))}
-        {!posts.length && <p>No post available.</p>}
+        {!posts.length && <p>No posts available.</p>}
       </ul>
     </div>
   );
