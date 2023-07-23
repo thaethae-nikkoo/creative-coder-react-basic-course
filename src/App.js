@@ -41,12 +41,14 @@ function App() {
       </p>
       <button onClick={changeName}>Change Name</button>
       <ul>
-        {posts.map((post) => (
-          <li key={post.id}>
-            {post.title}
-            <br /> <button onClick={() => deletePost(post.id)}>Delete</button>
-          </li>
-        ))}
+        {!!posts.length &&
+          posts.map((post) => (
+            <li key={post.id}>
+              {post.title}
+              <br /> <button onClick={() => deletePost(post.id)}>Delete</button>
+            </li>
+          ))}
+        {!posts.length && <p>No post available.</p>}
       </ul>
     </div>
   );
