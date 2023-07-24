@@ -1,11 +1,10 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Image from "./assets/moonsoon.jpg";
 import { useState } from "react";
+import Navbar from "./components/Navbar/index";
+import PostLists from "./components/PostLists/index";
 
 function App() {
-  // let name = "thae nandar soe";
-  let [name, setName] = useState("thae nandar soe");
   let [posts, setPosts] = useState([
     {
       id: 1,
@@ -24,32 +23,10 @@ function App() {
       title: "Fourth Post",
     },
   ]);
-  console.log(posts);
-  let changeName = () => {
-    // name = "pyae sone aung";
-    setName("pyae sone aung");
-    console.log(name);
-  };
-  let deletePost = (id) => {
-    //filter (parameter , condition)
-    setPosts((prevState) => prevState.filter((post) => post.id !== id));
-  };
+
   return (
-    <div className="App">
-      <p className="paragraph">
-        My name is <strong>{name}</strong>
-      </p>
-      <button onClick={changeName}>Change Name</button>
-      <ul>
-        {!!posts.length &&
-          posts.map((post) => (
-            <li key={post.id}>
-              {post.title}
-              <br /> <button onClick={() => deletePost(post.id)}>Delete</button>
-            </li>
-          ))}
-        {!posts.length && <p>No post available.</p>}
-      </ul>
+    <div>
+      <Navbar /> <PostLists posts={posts} />
     </div>
   );
 }

@@ -1,0 +1,21 @@
+/* nav component */
+nav {
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0px 0px 23px 1px rgb(135, 134, 134);
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.container ul {
+  display: flex;
+}
+.container li {
+  list-style-type: none;
+  margin: 0 20px;
+}
