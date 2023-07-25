@@ -1,10 +1,11 @@
 /* nav component */
-nav {
+
+.navbar-component {
   background-color: #fff;
   padding: 10px;
   box-shadow: 0px 0px 23px 1px rgb(135, 134, 134);
 }
-.container {
+.navbar-component .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,10 +13,10 @@ nav {
   margin: auto;
 }
 
-.container ul {
+.navbar-component .container ul {
   display: flex;
 }
-.container li {
+.navbar-component .container li {
   list-style-type: none;
   margin: 0 20px;
 }
