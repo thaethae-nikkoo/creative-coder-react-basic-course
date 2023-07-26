@@ -21,18 +21,14 @@ function App() {
       id: 3,
       title: "Third Post",
     },
-    {
-      id: 0,
-      title: "Fourth Post",
-    },
   ]);
 
   return (
     <div>
-      <Navbar setShowModal={setShowModal} danger={true} />
+      <Navbar setShowModal={setShowModal} />
       <PostLists posts={posts} />
       {showModal && (
-        <Modal>
+        <Modal danger>
           <h1>Terms & Conditions</h1>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate
