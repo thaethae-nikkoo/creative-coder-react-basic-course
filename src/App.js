@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div>
-      <Navbar setShowModal={setShowModal} />
+      <Navbar setShowModal={setShowModal} danger={true} />
       <PostLists posts={posts} />
       {showModal && (
         <Modal>
