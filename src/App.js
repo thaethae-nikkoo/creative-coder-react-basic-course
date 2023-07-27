@@ -3,6 +3,7 @@ import "./App.css";
 import { useState } from "react";
 import Navbar from "./components/Navbar/index";
 import PostLists from "./components/PostLists/index";
+import PostForm from "./components/PostForm/index";
 import Modal from "./components/Modal/index";
 
 function App() {
@@ -28,15 +29,8 @@ function App() {
       <Navbar setShowModal={setShowModal} />
       <PostLists posts={posts} />
       {showModal && (
-        <Modal danger>
-          <h1>Terms & Conditions</h1>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate
-            expedita saepe facilis architecto voluptas, suscipit laboriosam
-            distinctio voluptatem id aliquid, inventore eligendi ex ipsam culpa
-            animi est sunt rem quidem!
-          </p>
-          <button onClick={() => setShowModal(false)}>Close</button>
+        <Modal danger setShowModal={setShowModal}>
+          <PostForm />
         </Modal>
       )}
     </div>
