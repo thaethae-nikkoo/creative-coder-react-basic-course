@@ -5,8 +5,9 @@
 .post-form label {
   margin-right: 20px;
 }
-.post-form input {
-  width: 80%;
+.post-form input,
+select {
+  width: 70%;
   border: 1px solid gray;
   padding: 10px;
   border-radius: 5px;

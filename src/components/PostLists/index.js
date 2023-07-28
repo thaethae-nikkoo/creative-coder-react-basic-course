@@ -8,7 +8,8 @@ export default function PostLists({ posts }) {
         {!!posts.length &&
           posts.map((posts) => (
             <div key={posts.id} className={`single-post ${styles.card}`}>
-              {posts.title}
+              <h2> {posts.title}</h2>
+              <h4> {posts.status}</h4>
             </div>
           ))}
       </div>
