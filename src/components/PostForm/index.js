@@ -1,20 +1,23 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./index.css";
 import { upload } from "@testing-library/user-event/dist/upload";
 export default function PostForm({ addPost }) {
-  let [title, setTitle] = useState("");
-  let onChangeHandler = (e) => {
-    setTitle(e.target.value);
-  };
+  // let [title, setTitle] = useState("");
+  // let onChangeHandler = (e) => {
+  //   setTitle(e.target.value);
+  // };
+  let title = useRef();
   let resetForm = () => {
-    setTitle("");
+    // setTitle("");
+    title.current.value = "";
     console.log("updated successfully");
   };
   let upload_post = (e) => {
     e.preventDefault();
     let post = {
       id: Math.floor(Math.random * 100000),
-      title: title,
+      // title: title,
+      title: title.current.value,
     };
     resetForm();
     addPost(post);
@@ -27,8 +30,9 @@ export default function PostForm({ addPost }) {
         <input
           type="text"
           placeholder="Title"
-          onChange={onChangeHandler}
-          value={title}
+          // onChange={onChangeHandler}
+          // value={title}
+          ref={title}
         />
 
         {/* အပေါ်က onChangeHandler function ကို ဖြုတ်ပီး ဒီလိုရေးလို့ရတယ် */}
