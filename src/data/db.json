@@ -2,18 +2,27 @@
     "trips": [
         {
             "id": 1,
-            "name": "2 nights in Yangon",
-            "price": 100000
+            "name": "1 nights in Yangon",
+            "price": 100000,
+            "location": "Myanmar"
         },
         {
             "id": 2,
             "name": "2 nights in Mandalay",
-            "price": 200000
+            "price": 200000,
+            "location": "Myanmar"
         },
         {
             "id": 3,
-            "name": "2 nights in Kalaw",
-            "price": 400000
+            "name": "3 nights in Kalaw",
+            "price": 400000,
+            "location": "Myanmar"
+        },
+        {
+            "id": 4,
+            "name": "4 nights in Bangkok",
+            "price": 400000,
+            "location": "Thailand"
         }
     ]
 }
