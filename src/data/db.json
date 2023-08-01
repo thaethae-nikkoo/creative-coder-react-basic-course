@@ -1,0 +1,19 @@
+{
+    "trips": [
+        {
+            "id": 1,
+            "name": "2 nights in Yangon",
+            "price": 100000
+        },
+        {
+            "id": 2,
+            "name": "2 nights in Mandalay",
+            "price": 200000
+        },
+        {
+            "id": 3,
+            "name": "2 nights in Kalaw",
+            "price": 400000
+        }
+    ]
+}
