@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import "./App.css";
 import TripList from "./components/TripList/index";
 
 function App() {
-  return <TripList />;
+  useEffect(() => {
+    console.log("run first time");
+  }, []);
+  // return <TripList />;
 }
 
 export default App;
