@@ -1,12 +1,16 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import TripList from "./components/TripList/index";
 
 function App() {
-  useEffect(() => {
-    console.log("run first time");
-  }, []);
-  // return <TripList />;
+  let [show, setShow] = useState(true);
+
+  return (
+    <>
+      <button onClick={() => setShow(false)}>Hide</button>
+      {show && <TripList />}
+    </>
+  );
 }
 
 export default App;
