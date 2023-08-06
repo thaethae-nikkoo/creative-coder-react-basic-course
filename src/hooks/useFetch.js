@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function useFetch(url, _options) {
   let [data, setData] = useState(null);
@@ -6,7 +6,8 @@ function useFetch(url, _options) {
   let [error, setError] = useState(null);
   let abortController = new AbortController();
   let signal = abortController.signal;
-  let [options, setOptions] = useState(_options);
+  // let [options, setOptions] = useState(_options);
+  let options = useRef(_options).current;
   useEffect(() => {
     console.log(options);
     setLoading(true);
