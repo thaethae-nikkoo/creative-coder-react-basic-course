@@ -20,7 +20,7 @@ export default function TripList() {
   //       });
   //   }, [url]);
   //   console.log(trips);
-  let { data: trips, loading, error } = useFetch(url);
+  let { data: trips, loading, error } = useFetch(url, { type: "GET" });
   console.log(trips);
   return (
     <div className="container">
